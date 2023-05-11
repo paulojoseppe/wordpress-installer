@@ -67,10 +67,10 @@ printf '\n'
 
 echo "Configuring WordPress... "
 cp wp-config-sample.php wp-config.php
-sed -i "" "s/database_name_here/$dbname/g" wp-config.php
-sed -i "" "s/username_here/$dbuser/g" wp-config.php
-sed -i "" "s/password_here/$dbpass/g" wp-config.php
-sed -i "" "s/localhost/$dbhost/g" wp-config.php
+sed -i "s/database_name_here/$dbname/g" wp-config.php
+sed -i "s/username_here/$dbuser/g" wp-config.php
+sed -i "s/password_here/$dbpass/g" wp-config.php
+sed -i "s/localhost/$dbhost/g" wp-config.php
 
 #   Set authentication unique keys and salts in wp-config.php
 perl -i -pe '
